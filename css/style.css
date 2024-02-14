@@ -149,6 +149,7 @@ header {
 #logo {
   font-weight: bold;
   font-size: 3rem;
+  cursor: pointer;
 }
 
 header ul {
@@ -316,4 +317,42 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.newsletter {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 0px;
+  border-color: gainsboro;
+  width: 60%;
+}
+
+.submitButton {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 1px;
+  width: 50%;
+  background-color: gainsboro;
+  font-size: 12px;
+}
+
+.caseStudyButton {
+  border: none;
+  color: grey;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 1px solid gainsboro;
+}
+
+.cardTitle {
+  font-size: 33px;
+  margin-bottom: 10px;
 }
