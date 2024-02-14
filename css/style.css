@@ -1,0 +1,319 @@
+@font-face {
+  font-family: neueHaasUnicaPro;
+  src: url(NeueHaasUnicaPro-Regular.otf);
+}
+
+@font-face {
+  font-family: neueHaasUnicaPro;
+  src: url(NeueHaasUnicaPro-Bold.otf);
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: neueHaasUnicaPro;
+  background-color: whitesmoke;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+#hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+#mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#mobile-menu-overlay ul {
+  list-style: none;
+  padding: 0;
+}
+
+#mobile-menu-overlay li {
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+#info {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  display: block;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  width: 100vw;
+}
+
+#canvas-container {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#info-container {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 2rem;
+}
+
+/* Styles for desktop screens */
+@media (min-width: 933px) {
+  #info-caption {
+    width: 50vh;
+  }
+  .nav-item {
+    background: linear-gradient(0deg, slateblue, rgb(139, 23, 33)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+  }
+  
+  .nav-item:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+    color:#F5F5F5;
+  }
+  
+  .name-hover {
+    background: linear-gradient(0deg, slateblue, rgb(139, 23, 33)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+  }
+  
+  .name-hover:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+    color:#F5F5F5;
+  }
+}
+
+
+
+#content {
+  position: relative;
+  z-index: 2;
+}
+
+header {
+  background-color: whitesmoke;
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+header ul {
+  float: right;
+  color: black;
+  font-weight: bold;
+  margin: 0 !important;
+}
+
+header li {
+  display: inline-block;
+  padding: 0px 5px;
+}
+
+header p {
+  display: inline-block;
+}
+
+section {
+  padding: 50px 0;
+  margin-bottom: 20rem;
+}
+
+.flexContainer {
+  display: flex;
+  padding: 5% 15%;
+  justify-content: center;
+}
+
+.flexContainer div {
+  width: 60%;
+  padding: 25px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#skillImg {
+  margin: 10%;
+}
+
+
+@media (max-width: 932px) {
+
+  #wrapper {
+    flex-direction: column !important;
+  }
+
+  #canvas-container,
+  #info-container {
+    width: 100vw;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  #canvas-container {
+    margin-top: 5%;
+    margin-bottom: -33%;
+  }
+
+  #info-container {
+    padding: 20px;
+    text-align: center;
+  }
+
+  header ul {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: block;
+    top: 1rem;
+    right: 1rem;
+    z-index: 11;
+    font-size: 2rem;
+  }
+
+  #info-caption {
+    margin-top: 2rem;
+  }
+
+  .flexContainer {
+    display: flex;
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  .flexContainer div {
+    width: 100% !important;
+    padding: 25px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  align-items: stretch; /* Align the children of the card vertically */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures the image respects the border-radius */
+  margin: 10px;
+  
+}
+
+.card-image img {
+  display: block; /* Remove any extra space below the image */
+  width: 100%; /* Make image full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the height of the card */
+}
+
+.card-image {
+  flex-basis: 50%; /* Take up half of the card's width */
+  flex-shrink: 0; /* Don't shrink */
+  height: 100%; /* Full height */
+}
+
+.card-content {
+  padding: 1rem;
+  flex: 1; /* Take remaining space */
+}
+
+/* Adjustments for iPhone and similar devices */
+@media only screen and (max-width: 480px) {
+  .card {
+    flex-direction: column; /* Stack image and text on small screens */
+  }
+  
+  .card-image {
+    width: 100%; /* Full width */
+  }
+
+  .card-image img {
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height automatically */
+  }
+  
+  .card-content {
+    padding: 0.5rem; /* Smaller padding on small screens */
+  }
+
+  .heading {
+    padding: 0 !important;
+  }
+}
+
+.textBox 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
